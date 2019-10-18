@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>这是例子</string>
+  </property>
+  <property name="toolTip">
+   <string>这是截屏按钮</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string comment="什么是语义" extracomment="这是我新做出来的一个气泡"/>
+   </property>
+   <property name="text">
+    <string>截屏</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>terminal_rec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>start_col()</slot>
+  <slot>terminal_rec()</slot>
+ </slots>
+</ui>

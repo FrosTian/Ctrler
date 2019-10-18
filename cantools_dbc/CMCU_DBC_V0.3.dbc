@@ -1,0 +1,454 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ yes_no_val 1 "YES" 0 "NO" ;
+VAL_TABLE_ detect_self_pro 1 "completed" 0 "processing" ;
+VAL_TABLE_ flag_val 1 "valid" 0 "invalid" ;
+VAL_TABLE_ A3922_sts_val 1 "fault" 0 "normal" ;
+VAL_TABLE_ Chip_ch_sts_val 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_TABLE_ node_sts 1 "absent" 0 "present" ;
+VAL_TABLE_ acvu_sys_sts_val 8 "fault" 7 "stop" 6 "human_drv" 5 "auto_drv" 4 "remote_drv" 3 "pre_auto" 2 "pre_remote" 1 "standby" 0 "init" ;
+VAL_TABLE_ boolean_val 1 "valid" 0 "invalid" ;
+VAL_TABLE_ ign_sts_val 1 "IGN_ON" 0 "IGN_OFF" ;
+VAL_TABLE_ mot_fault_val 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_TABLE_ posi_sts_val 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_TABLE_ m2_run_sts_val 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_TABLE_ m1_run_sts_val 1 "run_p" 0 "stop" ;
+VAL_TABLE_ type_cmd_val 2 "single" 1 "multi" 0 "invalid" ;
+VAL_TABLE_ type2_m_cmd_val 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_TABLE_ type1_m_cmd_val 1 "run" 0 "stop" ;
+
+
+BO_ 273 BCM_111: 8 Vector__XXX
+ SG_ BCM_RcBaffleCtrl : 27|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RcWateringCtrl : 26|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RcVibratedustCtrl : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RcCleanCtrl : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 245 AVCU_TX2_F5: 8 Vector__XXX
+ SG_ AVCU_Mainbrush_Fan_DetecCtrl : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_WeltCleanCtrl : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_MotorFaultClearReq : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_WateringCtrl : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_VibratedustCtrl : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_CleanCtrl : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_WastedumpCtrl : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_BaffleCtrl : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 134 AVCU_XEP_86: 8 Vector__XXX
+ SG_ AVCU_ChargingStopDrvState : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_SystemState : 5|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 827 CMCU_UART_SENSOR: 8 Vector__XXX
+
+BO_ 826 CMCU_MOTOR_DIAG_STS_2: 8 Vector__XXX
+ SG_ Detect_Self_Big_Motor : 55|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_R1_UpDown : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_L1_UpDown : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_R1_Shrink : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_L1_Shrink : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_MainPush : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_Shelter_Push : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Detect_Self_SBrusher_Push : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_VRU : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_POR : 41|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_FF : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_OL : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_BLO : 46|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_ALO : 45|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_BHO : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ A3922_AHO : 43|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH8_Sts : 39|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH7_Sts : 37|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH6_Sts : 35|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH5_Sts : 33|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH4_Sts : 31|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH3_Sts : 29|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH2_Sts : 27|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip2_CH1_Sts : 25|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH8_Sts : 23|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH7_Sts : 21|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH6_Sts : 19|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH5_Sts : 17|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH4_Sts : 15|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH3_Sts : 13|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH2_Sts : 11|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chip1_CH1_Sts : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Diag_Big_Motor_Stall_Sts : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Big_Motor_OC_Sts : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Big_Motor_Open_Sts : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Big_Motor_Fault_Sts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1860 DIAG_RESP_ID_CMCU: 8 Vector__XXX
+
+BO_ 1796 DIAG_REQ_ID_CMCU: 8 Vector__XXX
+
+BO_ 825 CMCU_MOTOR_DIAG_STS_1: 8 Vector__XXX
+ SG_ Diag_R1_UpDown_Stall_Sts : 61|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_UpDown_OC_Sts : 59|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_UpDown_Open_Sts : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_UpDown_Fault_Sts : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_UpDown_Stall_Sts : 53|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_UpDown_OC_Sts : 51|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_UpDown_Open_Sts : 49|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_UpDown_Fault_Sts : 55|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_Shrink_Stall_Sts : 45|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_Shrink_OC_Sts : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_Shrink_Open_Sts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_Shrink_Fault_Sts : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_Shrink_Stall_Sts : 37|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_Shrink_OC_Sts : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_Shrink_Open_Sts : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_Shrink_Fault_Sts : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_MainPush_Stall_Sts : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_MainPush_OC_Sts : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_MainPush_Open_Sts : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_MainPush_Fault_Sts : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Shelter_Push_Stall_Sts : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Shelter_Push_OC_Sts : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Shelter_Push_Open_Sts : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Shelter_Push_Fault_Sts : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_SBrusher_Push_Stall_Sts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_SBrusher_Push_OC_Sts : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_SBrusher_Push_Open_Sts : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_SBrusher_Push_Fault_Sts : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Dust_Stall_Sts : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Dust_OC_Sts : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Dust_Open_Sts : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Dust_Fault_Sts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 824 CMCU_MOTOR_DIAG_STS: 8 Vector__XXX
+ SG_ Diag_Pump_Stall_Sts : 61|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Pump_OC_Sts : 59|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Pump_Open_Sts : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Pump_Fault_Sts : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_EdgeBrush_Stall_Sts : 53|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_EdgeBrush_OC_Sts : 51|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_EdgeBrush_Open_Sts : 49|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R1_EdgeBrush_Fault_Sts : 55|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_EdgeBrush_Stall_Sts : 45|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_EdgeBrush_OC_Sts : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_EdgeBrush_Open_Sts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L1_EdgeBrush_Fault_Sts : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan2_Stall_Sts : 37|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan2_OC_Sts : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan2_Open_Sts : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan2_Fault_Sts : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan1_Stall_Sts : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan1_OC_Sts : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan1_Open_Sts : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Fan1_Fault_Sts : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R2_EdgeBrush_Stall_Sts : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R2_EdgeBrush_OC_Sts : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R2_EdgeBrush_Open_Sts : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_R2_EdgeBrush_Fault_Sts : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L2_EdgeBrush_Stall_Sts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L2_EdgeBrush_OC_Sts : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L2_EdgeBrush_Open_Sts : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_L2_EdgeBrush_Fault_Sts : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Main_Brush_Stall_Sts : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Main_Brush_OC_Sts : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Main_Brush_Open_Sts : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diag_Main_Brush_Fault_Sts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 823 CMCU_MOTOR_RUN_STS: 8 Vector__XXX
+ SG_ MainPush_posi_sts : 63|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R1_UpDown_posi_sts : 59|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L1_UpDown_posi_sts : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R1_Shrink_posi_sts : 51|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L1_Shrink_posi_sts : 47|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Shelter_Push_posi_sts : 39|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SBrusher_Push_posi_sts : 35|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Big_Motor_posi_sts : 43|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MainPush_run_sts : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ R1_UpDown_run_sts : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ L1_UpDown_run_sts : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ R1_Shrink_run_sts : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ L1_Shrink_run_sts : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Shelter_Push_run_sts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ SBrusher_Push_run_sts : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Big_Motor_run_sts : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pump_run_sts : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ R1_EdgeBrush_run_sts : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ L1_EdgeBrush_run_sts : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fan2_run_sts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fan1_run_sts : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ R2_EdgeBrush_run_sts : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ L2_EdgeBrush_run_sts : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Main_Brush_run_sts : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dust_run_sts : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 822 CMCU_MOTOR_CURRENT_5: 8 Vector__XXX
+ SG_ Big_Motor_Current : 7|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 821 CMCU_MOTOR_CURRENT_4: 8 Vector__XXX
+ SG_ R1_UpDown_Current : 55|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ L1_UpDown_Current : 39|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ R1_Shrink_Current : 23|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ L1_Shrink_Current : 7|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 819 CMCU_MOTOR_CURRENT_2: 8 Vector__XXX
+ SG_ Pump_Current : 55|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ R1_EdgeBrush_Current : 39|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ L1_EdgeBrush_Current : 23|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ Fan2_Current : 7|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 818 CMCU_MOTOR_CURRENT_1: 8 Vector__XXX
+ SG_ Fan1_Current : 55|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ R2_EdgeBrush_Current : 39|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ L2_EdgeBrush_Current : 23|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ Main_Brush_Current : 7|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 820 CMCU_MOTOR_CURRENT_3: 8 Vector__XXX
+ SG_ MainPush_Current : 55|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ Shelter_Push_Current : 39|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ Dust_Current : 7|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ SBrusher_Push_Current : 23|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 817 CMCU_SYS_STS: 8 Vector__XXX
+ SG_ fCMCU_TemperHigh : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ fBatVoltag_Low : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ fBatVoltag_High : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ID131_sts : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_111_sts : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_XEP_86_sts : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVCU_TX2_F5_sts : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IGN_sts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ sys_sts : 3|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ total_time : 55|16@0+ (1,0) [0|65535] "s" Vector__XXX
+ SG_ NTC_value : 47|8@0+ (1,-40) [0|255] ".C" Vector__XXX
+ SG_ bat_val_mv_val : 31|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+
+BO_ 305 CMCU_CTRL_ID: 8 Vector__XXX
+ SG_ C_WastedumpCtrl : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ C_VibratedustCtrl : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ C_WateringCtrl : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ C_WeltCleanCtrl : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ C_CleanCtrl : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ clear_comfirm_req : 4|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Shelter_Push_cmd : 29|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SBrusher_Push_cmd : 27|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R2_EdgeBrush_cmd : 13|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R1_UpDown_cmd : 39|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R1_Shrink_cmd : 35|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ R1_EdgeBrush_cmd : 21|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Pump_cmd : 23|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MainPush_cmd : 41|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Main_Brush_cmd : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L2_EdgeBrush_cmd : 11|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L1_UpDown_cmd : 37|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L1_Shrink_cmd : 33|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ L1_EdgeBrush_cmd : 19|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Fan2_cmd : 17|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Fan1_cmd : 15|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dust_cmd : 25|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Big_Motor_cmd : 31|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ type_cmd : 3|4@0+ (1,0) [0|4] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 273 BCM_RcBaffleCtrl 1 "valid" 0 "invalid" ;
+VAL_ 273 BCM_RcWateringCtrl 1 "valid" 0 "invalid" ;
+VAL_ 273 BCM_RcVibratedustCtrl 1 "valid" 0 "invalid" ;
+VAL_ 273 BCM_RcCleanCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_Mainbrush_Fan_DetecCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_WeltCleanCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_MotorFaultClearReq 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_WateringCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_VibratedustCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_CleanCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_WastedumpCtrl 1 "valid" 0 "invalid" ;
+VAL_ 245 AVCU_BaffleCtrl 1 "valid" 0 "invalid" ;
+VAL_ 134 AVCU_ChargingStopDrvState 1 "valid" 0 "invalid" ;
+VAL_ 134 AVCU_SystemState 8 "fault" 7 "stop" 6 "human_drv" 5 "auto_drv" 4 "remote_drv" 3 "pre_auto" 2 "pre_remote" 1 "standby" 0 "init" ;
+VAL_ 826 Detect_Self_Big_Motor 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_R1_UpDown 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_L1_UpDown 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_R1_Shrink 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_L1_Shrink 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_MainPush 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_Shelter_Push 1 "completed" 0 "processing" ;
+VAL_ 826 Detect_Self_SBrusher_Push 1 "completed" 0 "processing" ;
+VAL_ 826 A3922_VRU 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_POR 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_FF 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_OL 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_BLO 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_ALO 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_BHO 1 "fault" 0 "normal" ;
+VAL_ 826 A3922_AHO 1 "fault" 0 "normal" ;
+VAL_ 826 Chip2_CH8_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH7_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH6_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH5_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH4_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH3_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH2_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip2_CH1_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH8_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH7_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH6_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH5_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH4_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH3_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH2_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Chip1_CH1_Sts 3 "OC failure" 2 "STG/STB failure" 1 "OL failure" 0 "No failure" ;
+VAL_ 826 Diag_Big_Motor_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 826 Diag_Big_Motor_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 826 Diag_Big_Motor_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 826 Diag_Big_Motor_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_UpDown_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_UpDown_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_UpDown_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_UpDown_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_UpDown_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_UpDown_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_UpDown_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_UpDown_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_Shrink_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_Shrink_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_Shrink_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_R1_Shrink_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_Shrink_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_Shrink_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_Shrink_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_L1_Shrink_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_MainPush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_MainPush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_MainPush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_MainPush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Shelter_Push_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Shelter_Push_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Shelter_Push_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Shelter_Push_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_SBrusher_Push_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_SBrusher_Push_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_SBrusher_Push_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_SBrusher_Push_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Dust_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Dust_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Dust_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 825 Diag_Dust_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Pump_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Pump_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Pump_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Pump_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R1_EdgeBrush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R1_EdgeBrush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R1_EdgeBrush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R1_EdgeBrush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L1_EdgeBrush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L1_EdgeBrush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L1_EdgeBrush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L1_EdgeBrush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan2_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan2_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan2_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan2_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan1_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan1_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan1_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Fan1_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R2_EdgeBrush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R2_EdgeBrush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R2_EdgeBrush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_R2_EdgeBrush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L2_EdgeBrush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L2_EdgeBrush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L2_EdgeBrush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_L2_EdgeBrush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Main_Brush_Stall_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Main_Brush_OC_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Main_Brush_Open_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 824 Diag_Main_Brush_Fault_Sts 2 "confirm fault" 1 "test fault" 0 "normal" ;
+VAL_ 823 MainPush_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 R1_UpDown_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 L1_UpDown_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 R1_Shrink_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 L1_Shrink_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 Shelter_Push_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 SBrusher_Push_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 Big_Motor_posi_sts 7 "posi_5" 6 "posi_4" 5 "posi_3" 4 "posi_2" 3 "posi_1" 2 "end_posi" 1 "start_posi" 0 "default" ;
+VAL_ 823 MainPush_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 R1_UpDown_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 L1_UpDown_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 R1_Shrink_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 L1_Shrink_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 Shelter_Push_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 SBrusher_Push_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 Big_Motor_run_sts 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 823 Pump_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 R1_EdgeBrush_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 L1_EdgeBrush_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 Fan2_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 Fan1_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 R2_EdgeBrush_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 L2_EdgeBrush_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 Main_Brush_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 823 Dust_run_sts 1 "run_p" 0 "stop" ;
+VAL_ 817 fCMCU_TemperHigh 1 "valid" 0 "invalid" ;
+VAL_ 817 fBatVoltag_Low 1 "valid" 0 "invalid" ;
+VAL_ 817 fBatVoltag_High 1 "valid" 0 "invalid" ;
+VAL_ 817 ID131_sts 1 "absent" 0 "present" ;
+VAL_ 817 BCM_111_sts 1 "absent" 0 "present" ;
+VAL_ 817 AVCU_XEP_86_sts 1 "absent" 0 "present" ;
+VAL_ 817 AVCU_TX2_F5_sts 1 "absent" 0 "present" ;
+VAL_ 817 IGN_sts 1 "IGN_ON" 0 "IGN_OFF" ;
+VAL_ 305 C_WateringCtrl 1 "valid" 0 "invalid" ;
+VAL_ 305 C_WeltCleanCtrl 1 "valid" 0 "invalid" ;
+VAL_ 305 C_CleanCtrl 1 "valid" 0 "invalid" ;
+VAL_ 305 clear_comfirm_req 1 "valid" 0 "invalid" ;
+VAL_ 305 Shelter_Push_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 SBrusher_Push_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 R2_EdgeBrush_cmd 1 "run" 0 "stop" ;
+VAL_ 305 R1_UpDown_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 R1_Shrink_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 R1_EdgeBrush_cmd 1 "run" 0 "stop" ;
+VAL_ 305 Pump_cmd 1 "run" 0 "stop" ;
+VAL_ 305 MainPush_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 Main_Brush_cmd 1 "run" 0 "stop" ;
+VAL_ 305 L2_EdgeBrush_cmd 1 "run" 0 "stop" ;
+VAL_ 305 L1_UpDown_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 L1_Shrink_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 L1_EdgeBrush_cmd 1 "run" 0 "stop" ;
+VAL_ 305 Fan2_cmd 1 "run" 0 "stop" ;
+VAL_ 305 Fan1_cmd 1 "run" 0 "stop" ;
+VAL_ 305 Dust_cmd 1 "run" 0 "stop" ;
+VAL_ 305 Big_Motor_cmd 2 "run_n" 1 "run_p" 0 "stop" ;
+VAL_ 305 type_cmd 2 "single" 1 "multi" 0 "invalid" ;
+
